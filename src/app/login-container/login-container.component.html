@@ -1,0 +1,74 @@
+<main>
+  <div class="form-box">
+    <div class="form-title">
+      <i class="fas fa-arrow-left" style="font-size: 30px"></i>
+      <h3>Log in with Quantum</h3>
+    </div>
+
+    <div class="radio-button-div">
+      <label for="district" class="radio">
+        <input
+          type="radio"
+          id="district"
+          name="school-type"
+          value="District"
+          class="radio__input"
+        />
+        <div class="radio__radio"></div>
+        District
+      </label>
+
+      <label for="independent-school" class="radio">
+        <input
+          type="radio"
+          id="independent-school"
+          name="school-type"
+          value="Independent School"
+          class="radio__input"
+        />
+        <div class="radio__radio"></div>
+        Independent School
+      </label>
+    </div>
+
+    <div class="form-details-div">
+      <label for="state">State*</label>
+      <select id="state">
+        <option value="alabama">Alabama</option>
+        <option value="alaska">Alaska</option>
+        <option value="arizona">Arizona</option>
+      </select>
+
+      <label for="district">District*</label>
+      <select id="district">
+        <option value="autauga">Autauga</option>
+        <option value="baldwin">Baldwin</option>
+        <option value="barbour">Barbour</option>
+      </select>
+
+      <div class="login-details-div">
+        <div class="text-field">
+          <input type="text" required placeholder="Username/Email ID*" />
+          <a href="#" class="forgot-cred">FORGOT USERNAME?</a>
+        </div>
+        <div class="text-field">
+          <input type="password" required placeholder="Password*" />
+          <span class="p-viewer">
+            <i class="fa fa-eye" aria-hidden="true"></i>
+          </span>
+          <a href="#" class="forgot-cred">FORGOT PASSWORD?</a>
+        </div>
+      </div>
+      <div class="checkbox-div">
+        <input
+          type="checkbox"
+          id="remember-me"
+          name="remember-me"
+          value="yes"
+        />
+        <label for="remember-me">Remember Me</label><br />
+      </div>
+      <button class="login-button" routerLink="../dashboard">LOG IN</button>
+    </div>
+  </div>
+</main>
