@@ -13,6 +13,7 @@ import { MainContainerDashboardComponent } from './dashboard/main-container-dash
 import {MatIconModule} from '@angular/material/icon';
 import { CardComponent } from './dashboard/card/card.component';
 import { NavbarService } from './navbar-comp/navbar-comp.service';
+import { SortnamePipe } from './dashboard/card/sortname.pipe';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { NavbarService } from './navbar-comp/navbar-comp.service';
     LoginComponent,
     MainContainerDashboardComponent,
     CardComponent,
+    SortnamePipe,
   ],
   imports: [
     BrowserModule,

@@ -40,20 +40,3 @@
   align-items: center;
   border-bottom: 4px solid black;
 }
-.search-info {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 10px;
-  border-bottom: 2px solid #0000003d;
-}
-.search-filter > select {
-  border: none;
-  border-bottom: 2px solid #0000003d;
-  font-weight: bold;
-  outline: none;
-  background-color: #eeeeee;
-}
-.search-filter > i {
-  color: #1f7a54;
-  font-size: 1.2em;
-}

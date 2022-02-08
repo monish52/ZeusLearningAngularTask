@@ -1,3 +1,21 @@
+.search-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  border-bottom: 2px solid #0000003d;
+}
+.search-filter > select {
+  border: none;
+  border-bottom: 2px solid #0000003d;
+  font-weight: bold;
+  outline: none;
+  background-color: #eeeeee;
+}
+.search-filter > i {
+  color: #1f7a54;
+  font-size: 1.2em;
+}
+
 .courses-container {
   display: grid;
   /* grid-template: repeat(2, 220px) / repeat(2, 1fr); */
@@ -55,6 +73,16 @@
 }
 .descrp {
   margin-top: 0px;
+}
+.card-subject {
+  padding-right: 10px;
+  border-right: 2px solid #0000003d;
+}
+.card-grade {
+  padding-left: 5px;
+}
+.card-grade-plus {
+  color: #1f7a54;
 }
 .class-and-info {
   /* background-color: rgb(211, 228, 177); */

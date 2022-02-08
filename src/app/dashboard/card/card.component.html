@@ -1,10 +1,24 @@
+<div class="search-info">
+  <h6>Showing 4 of 4 courses</h6>
+  <div class="search-filter">
+    <label for="sort-by">Sort by:</label>
+    <select id="sort-by">
+      <option value="course-name" (click)="sortByName = true">
+        Course Name
+      </option>
+    </select>
+    <i class="fas fa-arrow-up"></i>
+  </div>
+</div>
+
 <div class="courses-container">
-  <div class="course-card" *ngFor="let card of cards">
+  <ng-container></ng-container>
+  <div class="course-card" *ngFor="let card of cards | sortname">
     <div class="expired-tag" *ngIf="card.isExpired">
       <span>Expired</span>
     </div>
     <div class="card-img">
-      <img src="{{ card.imageUrl }}" alt="Acceleration" />
+      <img src="{{ card.imageUrl }}" alt="{{ card.title }}" />
     </div>
     <div class="topic-details">
       <div class="card-title">
@@ -13,11 +27,11 @@
       </div>
       <div class="descrp">
         <p>
-          <span style="padding-right: 10px; border-right: 2px solid #0000003d"
-            >{{ card.subject }}
+          <span class="card-subject">
+            {{ card.subject }}
           </span>
-          <span style="padding-left: 5px">Grade {{ card.grade }} + </span
-          ><span style="color: #1f7a54">
+          <span class="card-grade">Grade {{ card.grade }} + </span>
+          <span class="card-grade-plus">
             <strong>{{ card.gradePlus }}</strong>
           </span>
           <br />
