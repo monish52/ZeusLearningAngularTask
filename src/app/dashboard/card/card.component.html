@@ -1,0 +1,58 @@
+<div class="courses-container">
+  <div class="course-card" *ngFor="let card of cards">
+    <div class="expired-tag" *ngIf="card.isExpired">
+      <span>Expired</span>
+    </div>
+    <div class="card-img">
+      <img src="{{ card.imageUrl }}" alt="Acceleration" />
+    </div>
+    <div class="topic-details">
+      <div class="card-title">
+        <h6>{{ card.title }}</h6>
+        <span class="material-icons" *ngIf="card.isStarred">star</span>
+      </div>
+      <div class="descrp">
+        <p>
+          <span style="padding-right: 10px; border-right: 2px solid #0000003d"
+            >{{ card.subject }}
+          </span>
+          <span style="padding-left: 5px">Grade {{ card.grade }} + </span
+          ><span style="color: #1f7a54">
+            <strong>{{ card.gradePlus }}</strong>
+          </span>
+          <br />
+          <span *ngIf="card.totalUnits > 0">
+            <strong>{{ card.totalUnits }} </strong>
+            Units
+          </span>
+          <span *ngIf="card.totalLessons > 0">
+            <strong>{{ card.totalLessons }}</strong>
+            Lessons
+          </span>
+          <span *ngIf="card.totalTopics > 0">
+            <strong>{{ card.totalTopics }} </strong>
+            Topics
+          </span>
+        </p>
+      </div>
+    </div>
+    <div class="class-and-info">
+      <select id="search-filter">
+        <option *ngIf="card.dropdownList == []">No Classes</option>
+        <option *ngFor="let dropdown of card.dropdownList">
+          {{ dropdown }}
+        </option>
+      </select>
+      <span *ngIf="card.totalStudents > 0"
+        >{{ card.totalStudents }} Students
+      </span>
+      <span *ngIf="card.date !== ''">{{ card.date }} </span>
+    </div>
+    <div class="card-icons">
+      <span class="material-icons">visibility</span>
+      <span class="material-icons">event</span>
+      <span class="material-icons">event_available</span>
+      <span class="material-icons">insert_chart</span>
+    </div>
+  </div>
+</div>

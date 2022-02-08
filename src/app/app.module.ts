@@ -9,9 +9,10 @@ import { FooterCompComponent } from './footer-comp/footer-comp.component';
 import { ContactContainerComponent } from './contact-container/contact-container.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginComponent } from './login/login.component';
-import { NavbarCompDashboardComponent } from './dashboard/navbar-comp-dashboard/navbar-comp-dashboard.component';
 import { MainContainerDashboardComponent } from './dashboard/main-container-dashboard/main-container-dashboard.component';
 import {MatIconModule} from '@angular/material/icon';
+import { CardComponent } from './dashboard/card/card.component';
+import { NavbarService } from './navbar-comp/navbar-comp.service';
 
 @NgModule({
   declarations: [
@@ -22,15 +23,15 @@ import {MatIconModule} from '@angular/material/icon';
     ContactContainerComponent,
     DashboardComponent,
     LoginComponent,
-    NavbarCompDashboardComponent,
     MainContainerDashboardComponent,
+    CardComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MatIconModule
   ],
-  providers: [],
+  providers: [NavbarService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
